@@ -1,0 +1,51 @@
+#:include kv/homescreen.kv
+#:include kv/startscreen.kv
+#:include kv/smokescreen.kv
+#:include kv/anxiousscreen.kv
+#:include kv/fingersscreen.kv
+#:include kv/tiredscreen.kv
+#:include kv/wheezescreen.kv
+#:include kv/swallowscreen.kv
+#:include kv/ancestorscreen.kv
+#:include kv/positivescreen.kv
+#:include kv/negativescreen.kv
+
+
+GridLayout:
+    cols:1
+    ScreenManager:
+        id:screen_manager
+        HomeScreen:
+            name:"home_screen"
+            id:home_screen
+        StartScreen:
+            name:"start_screen"
+            id:"start_screen"
+        SmokeScreen:
+            name:"smoke_screen"
+            id:"smoke_screen"
+        AnxiousScreen:
+            name:"anxious_screen"
+            id:"anxious_screen"
+        FingersScreen:
+            name:"fingers_screen"
+            id:"fingers_screen"
+        TiredScreen:
+            name:"tired_screen"
+            id:"tired_screen"
+        WheezeScreen:
+            name:"wheeze_screen"
+            id:"wheeze_screen"
+        SwallowScreen:
+            name:"swallow_screen"
+            id:"swallow_screen"
+        AncestorScreen:
+            name:"ancestor_screen"
+            id:"ancestor_screen"
+        PositiveScreen:
+            name:"positive_screen"
+            id:"positive_screen"
+        NegativeScreen:
+            name:"negative_screen"
+            id:"negative_screen"
+
