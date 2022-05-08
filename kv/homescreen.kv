@@ -1,0 +1,54 @@
+#:import utils kivy.utils
+
+<HomeScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb:utils.get_color_from_hex("#F9F9F9")
+            Rectangle:
+                size:self.size
+                pos:self.pos
+        GridLayout:
+            rows:1
+            pos_hint:{"top": 1.55,"right":.65}
+            size_hint:1,1
+            Image:
+                source: "icons/circle.png"
+        GridLayout:
+            rows:1
+            pos_hint:{"top": 1.45,"right":.5}
+            size_hint:1,1
+            Image:
+                source: "icons/circle2.png"
+        Label:
+            pos_hint: {"top":.85, "left":1}
+            size_hint: 1,.1
+            text:"Getting Started with CanceLR"
+            id:first_label
+            font_size:25
+            color: (0,0,0,1)
+        GridLayout:
+            rows:1
+            pos_hint:{"top":.75,"left":1}
+            size_hint:1,.3
+
+            Image:
+                source:"icons/example.jpg"
+        GridLayout:
+            rows:1
+            pos_hint:{"top":.5,"left":1}
+            size_hint:1,.3
+            Label:
+                text:"""Are you worried about your lungs?\nIf something bothers you about your\nlungs and you wanna make sure that\nit is not what google told you. You can\nuse our ML to get personal analysis of\nyour case."""
+                color:(0,0,0,1)
+        GridLayout:
+            rows:1
+            pos_hint:{"top":.2,"left":1}
+            size_hint:1,.1
+            ImageButton:
+                source: "icons/getstarted.png"
+                on_press:
+                    app.change_screen("start_screen")
+
+
+

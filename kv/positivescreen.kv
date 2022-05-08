@@ -1,0 +1,39 @@
+#:import utils kivy.utils
+
+<PositiveScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb:utils.get_color_from_hex("#F9F9F9")
+            Rectangle:
+                size:self.size
+                pos:self.pos
+
+        Label:
+            pos_hint: {"top":.98, "left":1}
+            size_hint: 1,.1
+            text:"Unfortunately,\nYou are suspected\n of having cancer"
+            id:first_label
+            font_size:25
+            color: (0,0,0,1)
+        GridLayout:
+            rows:1
+            pos_hint:{"top":.75,"left":1}
+            size_hint:1,.4
+
+            Image:
+                source:"icons/sad.png"
+
+
+
+        GridLayout:
+            rows:2
+            pos_hint:{"top":.30,"left":1}
+            size_hint:1,.2
+            ImageButton:
+                source: "icons/local.png"
+            ImageButton:
+                source: "icons/mainmenu.png"
+                on_press:
+                    app.change_screen("smoke_screen")
+

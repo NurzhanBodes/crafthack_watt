@@ -1,0 +1,59 @@
+#:import utils kivy.utils
+
+<StartScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb:utils.get_color_from_hex("#F9F9F9")
+            Rectangle:
+                size:self.size
+                pos:self.pos
+
+        Label:
+            pos_hint: {"top":.98, "left":1}
+            size_hint: 1,.1
+            text:"Getting Started with CanceLR"
+            id:first_label
+            font_size:25
+            color: (0,0,0,1)
+        GridLayout:
+            rows:1
+            pos_hint:{"top":.90,"left":1}
+            size_hint:1,.25
+
+            Image:
+                source:"icons/example.jpg"
+        GridLayout:
+            rows:1
+            pos_hint:{"top":.73,"left":1}
+            size_hint:1,.3
+            Label:
+                text:"""Are you worried about your lungs?\nIf something bothers you about your\nlungs and you wanna make sure that\nit is not what google told you. You can\nuse our ML to get personal analysis of\nyour case."""
+                color:(0,0,0,1)
+
+        TextInput:
+            id:user_name
+            hint_text:"Enter your name"
+            size_hint:.5,.05
+            pos_hint:{"top":.48,"right":.75}
+        TextInput:
+            id:user_age
+            hint_text:"Age"
+            size_hint:.5,.05
+            pos_hint:{"top":.42,"right":.75}
+        TextInput:
+            id:gender
+            hint_text:"Gender"
+            size_hint:.5,.05
+            pos_hint:{"top":.36,"right":.75}
+        GridLayout:
+            rows:2
+            pos_hint:{"top":.30,"left":1}
+            size_hint:1,.2
+            ImageButton:
+                source: "icons/start.png"
+                on_press:
+                    app.change_screen("smoke_screen")
+            ImageButton:
+                source: "icons/tasks.png"
+
